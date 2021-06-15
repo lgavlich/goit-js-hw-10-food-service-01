@@ -24,11 +24,11 @@ switchTheme.addEventListener('change', changeTheme);
 function changeTheme(evt) {
   if (evt.target.checked) {
     localStorage.setItem('theme', Theme.DARK);
-    body.classList.remove(Theme.DARK);
+    body.classList.remove(Theme.LIGHT);
     body.classList.add(Theme.DARK);
   } else {
     localStorage.setItem('theme', Theme.LIGHT);
-    body.classList.remove(...body.classList);
+    body.classList.remove(Theme.DARK);
     body.classList.add(Theme.LIGHT);
   }
 }
